@@ -1,4 +1,5 @@
-mod api;
+
+rojo/CONTRIBUTING.md mod api;
 mod assets;
 pub mod interface;
 mod ui;
@@ -58,7 +59,7 @@ impl LiveServer {
     }
 
     pub fn start(self, port: u16) {
-        let address = ([127, 0, 0, 1], port).into();
+        let address = ([0, 0, 0, 0], port).into();
 
         let server = Server::bind(&address)
             .serve(move || {
